@@ -35,26 +35,3 @@ El proyecto simula la creación de una tarjeta de información de empleado (`emp
     cd [nombre del directorio]
     ```
 2.  Ejecuta el script de Python.
-
-```python
-# Ejemplo de uso del código final
-first_name = "John"
-last_name = "Doe"
-full_name = first_name + " " + last_name
-
-employee_age = 28
-position = "Data Analyst"
-salary = 75000
-
-# Usando f-strings para formatear
-employee_card = f"Employee: {full_name} | Age: {employee_age} | Position: {position} | Salary: ${salary}"
-print(employee_card)
-
-# Extrayendo información de un código de empleado
-employee_code = "DEV-2026-JD-001"
-department = employee_code[0:3]      # "DEV"
-year_code = employee_code[4:8]       # "2026"
-initials = employee_code[9:11]        # "JD"
-last_three = employee_code[-3:]       # "001"
-
-print(f"Department: {department}, Year: {year_code}, Initials: {initials}, ID: {last_three}")

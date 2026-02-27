@@ -35,16 +35,3 @@ La función está diseñada para cumplir con los siguientes casos de uso:
     ```
 2.  Importa la función en tu script de Python o pruébala directamente en la consola interactiva.
 
-```python
-from Laboratorio import apply_discount
-
-# Ejemplos de uso
-print(apply_discount(100, 20))    # Salida: 80.0
-print(apply_discount(200, 50))    # Salida: 100.0
-print(apply_discount(50, 0))      # Salida: 50.0
-print(apply_discount(75, 100))    # Salida: 0.0
-print(apply_discount(74.5, 20.0)) # Salida: 59.6
-
-# Ejemplos con entradas inválidas
-print(apply_discount(-10, 20))    # Salida: The price should be greater than 0
-print(apply_discount(100, "20"))  # Salida: The discount should be a number

@@ -34,21 +34,3 @@ Con un desplazamiento (`shift`) de 5:
     ```
 2.  Importa las funciones en tu script de Python o pruébalas directamente.
 
-```python
-from caesar_cipher import encrypt, decrypt
-
-# Cifrar un mensaje
-mensaje_cifrado = encrypt("hello world", 5)
-print(f"Cifrado: {mensaje_cifrado}")  # Salida: mjqqt btwqi
-
-# Descifrar un mensaje
-mensaje_descifrado = decrypt("mjqqt btwqi", 5)
-print(f"Descifrado: {mensaje_descifrado}")  # Salida: hello world
-
-# Ejemplo con mayúsculas
-print(encrypt("Hello World", 3))  # Salida: Khoor Zruog
-
-# Ejemplo con mensaje cifrado proporcionado
-texto_cifrado = "Pbhentr vf sbhaq va hayvxryl cynprf"
-texto_descifrado = decrypt(texto_cifrado, 13)
-print(texto_descifrado)  # Salida: "Providencia" (o el mensaje descifrado)
