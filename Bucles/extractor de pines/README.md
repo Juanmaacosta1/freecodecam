@@ -20,7 +20,7 @@
 
 ---
 
-##  ¿Cómo funciona la magia?
+##  ¿Cómo funciona?
 
 Cada línea del poema guarda un dígito. La regla es simple:
 - **Cada línea del poema contiene un dígito del pin**
