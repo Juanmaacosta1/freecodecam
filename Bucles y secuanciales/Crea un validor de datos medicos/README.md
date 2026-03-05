@@ -1,61 +1,258 @@
-Declara una variable llamada medical_records y asígnale una lista vacía. En los siguientes pasos, la vas a usar para almacenar tus datos médicos.
-La lista medical_records almacenará diccionarios, cada uno representando a un paciente. Agrega un diccionario con una clave patient_id y un valor de la cadena P1001 a la lista medical_records.
-Agrega una clave age con el valor del entero 34 y una clave gender con el valor de la cadena Female a tu diccionario. No olvides la coma entre los pares clave-valor.
-Una clave diagnosis con el valor de Hypertension
-Una clave medications con el valor de la lista ['Lisinopril']
-Una clave last_visit_id con el valor de V2301
-iguiendo la misma estructura que usaste en los pasos anteriores, la lista medical_records ha sido completada para ti con los datos de otros pacientes. Siéntete libre de echarle un vistazo.
+# Medical Records Validation – Python
 
-A continuación comenzarás a escribir la función para validar el conjunto de datos. Crea una función llamada validate con un solo parámetro data.
+Este proyecto implementa un pequeño sistema en **Python** para almacenar y validar registros médicos de pacientes.
 
-Quieres asegurarte de que tus datos sean una lista o una tupla. Por lo tanto, dentro de la función validate, declara una variable llamada is_sequence y asígnale una llamada a isinstance. Pasa data como el primer argumento y una tupla que contiene list y tuple como el segundo argumento.
-Crea una estructura if. Para su condición, usa el operador not para negar is_sequence. Dentro de la estructura if, imprime Invalid format: expected a list or tuple. y retorna False.
-Justo después de tu sentencia if, declara una variable llamada is_invalid y asígnale False. Más adelante, la usarás como una bandera para ejecutar una sentencia condicional.
-Crea un ciclo for que itere sobre data. Usa la función enumerate para obtener tanto el índice como el elemento en data en cada iteración. Usa index y dictionary como variables de iteración.
+## 1. Creación de la estructura de datos
 
-Por ahora usa pass para llenar el cuerpo del ciclo.
-Dentro de tu ciclo for, si el elemento en dictionary no es una instancia de dict, imprime Invalid format: expected a dictionary at position <index>. (donde <index> debe ser reemplazado por el índice actual) y asigna True a is_invalid
-Después de tu ciclo for, aún dentro de la función validate, crea una estructura if. Si is_invalid es True, devuelve False.
-Al final de tu código, llama a la función validate con medical_records como argumento. Deberías ver Valid format. impreso en el terminal.
-Para probar la primera estructura if de tu función, convierte medical_records en una cadena. Deberías ver Invalid format: expected a list or tuple. impreso en el terminal.Ahora convierte medical_records de nuevo en una lista/tupla de diccionarios.
+Se declara una variable llamada `medical_records` y se le asigna una **lista vacía**. Esta lista se utilizará para almacenar datos médicos de pacientes.
 
-Para probar la segunda estructura condicional, agrega dos elementos de tu elección que no sean diccionarios al final de la lista medical_records. Deberías ver dos mensajes de validación impresos en el terminal.
-Ahora que probaste la validación para esta parte, elimina los últimos dos elementos de la lista medical_records.Vas a usar un conjunto para asegurarte de que cada diccionario no contenga claves adicionales o mal escritas.
+Cada elemento de la lista será un **diccionario** que representa un paciente.
 
-Dentro de la función validate, usa la estructura set() para crear un conjunto a partir de la siguiente lista de claves que cada diccionario debe tener: ['patient_id', 'age', 'gender', 'diagnosis', 'medications', 'last_visit_id']. Asigna el conjunto a una variable llamada key_set.
-Dentro de tu ciclo for, después de la primera sentencia if, crea una sentencia if que se ejecute cuando el conjunto de claves del diccionario actual sea diferente de key_set. Esto es para asegurar que no haya claves faltantes o inválidas en el diccionario.
+Se agrega un diccionario con la siguiente estructura:
 
-Dentro de la nueva estructura if, imprime Invalid format: <dictionary> at position <index> has missing and/or invalid keys. (donde <dictionary> y <index> deben ser reemplazados por el diccionario y el índice en la iteración actual) y asigna True a is_invalid.Para probar que todo funciona correctamente, intenta comentar la clave age del primer diccionario en medical_records.
+* `patient_id`: `"P1001"`
+* `age`: `34`
+* `gender`: `"Female"`
+* `diagnosis`: `"Hypertension"`
+* `medications`: `['Lisinopril']`
+* `last_visit_id`: `"V2301"`
 
-Deberías ver un mensaje de validación aparecer en el terminal.
-Ahora restaura la línea 'age': 34,.
+Siguiendo esta estructura, la lista `medical_records` puede contener datos de otros pacientes.
 
-Ahora vas a hacer que la validación sea más granular. Crea una función llamada find_invalid_records para encontrar valores inválidos en un diccionario. Dale los siguientes parámetros: patient_id, age, gender, diagnosis, medications, last_visit_id.
+---
 
-Dentro de tu nueva función, crea un diccionario vacío llamado constraints. Luego, devuelve constraints desde tu nueva función.
-En el ejemplo anterior, sum(**nums) es equivalente a sum(a=2, b=4, c=1).
+# 2. Creación de la función de validación
 
-Al final de tu código, imprime el resultado de llamar a la función find_invalid_records. Para sus argumentos, usa el operador ** para desempaquetar medical_records[0].
-El diccionario constraints contendrá cada clave que debes esperar tener en los datos para validar. El valor asociado a cada una indicará el resultado de la validación.
+Se crea una función llamada `validate` con un parámetro llamado `data`.
 
-Agrega la clave patient_id al diccionario constraints. Para su valor, usa una llamada a isinstance pasando patient_id y str como argumentos.
-Como escribiste en el paso anterior, patient_id debería ser una cadena. Sin embargo, quieres verificar que también tenga un patrón específico.
+La función se encargará de validar el formato de los datos recibidos.
 
-Para eso, vas a usar una expresión regular. Por lo tanto, en la parte superior de tu código, usa la palabra clave import para importar el módulo re.
+## Verificación del tipo de datos
 
-Agrega re.IGNORECASE como el tercer argumento a tu llamada re.search. Esto hará que tu búsqueda con regex no distinga entre mayúsculas y minúsculas.
+Dentro de la función se crea la variable:
 
-Después de eso, verás que None es reemplazado por el objeto de coincidencia <re.Match object; span=(0, 1), match='P'>, donde match indica la coincidencia y span indica su ubicación en la cadena.Después de la letra p, patient_id debe tener una serie de números. Entonces, modifica tu patrón regex para que tenga el carácter p seguido de la secuencia especial \d.Entonces añade un cuantificador + a tu patrón regex para que coincida con uno o más dígitos.Reemplaza la llamada search con una llamada fullmatch manteniendo los mismos argumentos.A continuación, quieres verificar que age sea un entero. Así que agrega otra clave age al diccionario constraints. Para su valor, llama a isinstance pasando age e int como sus argumentos.age no solo debe ser un entero, debe ser un entero positivo mayor o igual a 18.
+`is_sequence`
 
-Usando el operador and, añade una segunda expresión al valor de la clave age para verificar eso.Agrega otra clave gender al diccionario constraints. Siguiendo el formato de la expresión que escribiste en los pasos anteriores, verifica que gender sea una cadena. Luego, usa el operador and para comprobar que el gender en minúsculas esté en ('male', 'female').Ahora agrega una clave diagnosis al diccionario constraints. Para su valor, escribe una expresión que verifique que diagnosis sea una instancia de str o sea None.A continuación, agrega una clave medications al diccionario constraints. Para su valor, usa isinstance para verificar que medications sea una lista.
-Cada elemento en la lista medications debe ser una cadena. En este paso y en el siguiente escribirás una expresión para verificar eso. Usa el operador and para agregar otra expresión al valor de la clave medications.
+Esta variable utiliza `isinstance()` para verificar que `data` sea una **lista o una tupla**.
 
-En el lado derecho del operador and, usa la sintaxis de comprensión de listas para crear una lista evaluando isinstance(i, str) para cada i en medications.Pasa la lista [isinstance(i, str) for i in medications] a la función all para asegurarte de que cada elemento en ella sea una cadena.
-Pasa la lista [isinstance(i, str) for i in medications] a la función all para asegurarte de que cada elemento en ella sea una cadena.Agrega una última clave last_visit_id al diccionario constraints. Para su valor, usa isinstance para verificar que last_visit_id sea una cadena.Ahora que tu diccionario constraints está completo, cambiarás la sentencia return de find_invalid_records para que devuelva una lista de las claves inválidas.
+Si `data` **no es una lista o tupla**, se imprime:
 
-Usando la sintaxis de comprensión de listas, devuelve una lista que evalúa key para cada key, value en constraints.items().Como quieres devolver una lista que contenga solo las claves inválidas, agrega una cláusula if a tu comprensión para que cada key se agregue a la lista solo cuando value sea falsoLa función find_invalid_records está completa. Ahora, elimina print(find_invalid_records(**medical_records[0])) de tu código.
-Volviendo a la función validate, después de las dos sentencias if y aún dentro del ciclo for, crea una variable llamada invalid_records.
+```
+Invalid format: expected a list or tuple.
+```
 
-Luego, asígnale una llamada a find_invalid_records usando el operador ** para desempaquetar dictionary.Si pasas datos inválidos a la función validate, por ejemplo una lista que contiene elementos que no son diccionarios o diccionarios con claves faltantes y/o inválidas, Python generará un AttributeError y un TypeError, respectivamente. Siéntete libre de verificarlo modificando la lista medical_records.
+y la función retorna `False`.
 
-Para evitar eso, después de establecer is_invalid en True, usa la palabra clave continue para saltar a la siguiente iteración en ambas sentencias if.
+---
+
+# 3. Verificación de diccionarios dentro de la lista
+
+Se declara la variable:
+
+`is_invalid = False`
+
+Luego se crea un **ciclo for** usando `enumerate()` para obtener:
+
+* `index`
+* `dictionary`
+
+Si el elemento no es un diccionario se imprime:
+
+```
+Invalid format: expected a dictionary at position <index>.
+```
+
+y `is_invalid` se establece en `True`.
+
+Después del ciclo se verifica:
+
+Si `is_invalid` es `True`, la función retorna `False`.
+
+---
+
+# 4. Validación de claves del diccionario
+
+Se crea un conjunto llamado `key_set` con las claves esperadas:
+
+```
+['patient_id', 'age', 'gender', 'diagnosis', 'medications', 'last_visit_id']
+```
+
+Dentro del ciclo `for`, se verifica que el conjunto de claves del diccionario coincida con `key_set`.
+
+Si las claves son incorrectas o faltan claves, se imprime:
+
+```
+Invalid format: <dictionary> at position <index> has missing and/or invalid keys.
+```
+
+y `is_invalid` se establece en `True`.
+
+---
+
+# 5. Pruebas de validación
+
+Se llama a la función:
+
+```
+validate(medical_records)
+```
+
+Si todo es correcto se debería imprimir:
+
+```
+Valid format.
+```
+
+También se pueden hacer pruebas cambiando el tipo de `medical_records` a una cadena o agregando elementos que no sean diccionarios para verificar los mensajes de error.
+
+---
+
+# 6. Función para validar valores individuales
+
+Se crea una función llamada:
+
+`find_invalid_records`
+
+Esta función recibe los parámetros:
+
+* `patient_id`
+* `age`
+* `gender`
+* `diagnosis`
+* `medications`
+* `last_visit_id`
+
+Dentro de la función se crea un diccionario vacío llamado:
+
+`constraints`
+
+Este diccionario almacenará los resultados de cada validación.
+
+---
+
+# 7. Validación de `patient_id`
+
+Se verifica que `patient_id` sea una **cadena** usando `isinstance`.
+
+Además, se valida que tenga el formato correcto usando **expresiones regulares**.
+
+Para esto se importa el módulo:
+
+```
+import re
+```
+
+El patrón utilizado verifica que el identificador tenga:
+
+* la letra `P`
+* seguida de **uno o más dígitos**
+
+Ejemplo de patrón:
+
+```
+P\d+
+```
+
+Se utiliza `re.fullmatch()` junto con `re.IGNORECASE`.
+
+---
+
+# 8. Validación de `age`
+
+Se verifica que:
+
+* sea un **entero**
+* sea **mayor o igual a 18**
+
+Esto se logra usando `isinstance(age, int)` y una segunda condición con el operador `and`.
+
+---
+
+# 9. Validación de `gender`
+
+Se verifica que:
+
+* sea una cadena
+* su valor en minúsculas esté en:
+
+```
+('male', 'female')
+```
+
+---
+
+# 10. Validación de `diagnosis`
+
+Se comprueba que el valor sea:
+
+* una cadena (`str`)
+* o `None`.
+
+---
+
+# 11. Validación de `medications`
+
+Se verifica que:
+
+* sea una **lista**
+
+Luego se usa una **comprensión de listas** para comprobar que cada elemento sea una cadena.
+
+```
+[isinstance(i, str) for i in medications]
+```
+
+Después se utiliza la función `all()` para asegurarse de que todos los valores sean `True`.
+
+---
+
+# 12. Validación de `last_visit_id`
+
+Se verifica que `last_visit_id` sea una **cadena** usando `isinstance`.
+
+---
+
+# 13. Identificación de claves inválidas
+
+La función `find_invalid_records` devuelve una **lista con las claves inválidas**.
+
+Esto se realiza usando una **comprensión de listas** que recorre `constraints.items()` y agrega la clave solo si su valor es `False`.
+
+---
+
+# 14. Uso de la función dentro de `validate`
+
+Dentro del ciclo `for` de la función `validate`, se crea la variable:
+
+`invalid_records`
+
+Esta variable llama a:
+
+```
+find_invalid_records(**dictionary)
+```
+
+El operador `**` se usa para **desempaquetar el diccionario** y pasar sus valores como argumentos.
+
+---
+
+# 15. Manejo de errores durante la validación
+
+Si los datos contienen errores como:
+
+* elementos que no son diccionarios
+* diccionarios con claves faltantes
+
+Python puede generar errores como:
+
+* `AttributeError`
+* `TypeError`
+
+Para evitar esto, después de detectar un error se utiliza:
+
+```
+continue
+```
+
+Esto permite saltar a la siguiente iteración del ciclo y continuar la validación.
