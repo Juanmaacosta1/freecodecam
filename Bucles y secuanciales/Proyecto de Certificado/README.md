@@ -20,9 +20,9 @@ Las funcionalidades incluyen:
 
 ---
 
-# ⚙️ Funciones Implementadas
+#  Funciones Implementadas
 
-## 1️⃣ add_setting(settings, setting)
+##  add_setting(settings, setting)
 
 Agrega una nueva configuración al diccionario.
 
@@ -51,7 +51,7 @@ Setting 'volume' added with value 'high' successfully!
 
 ---
 
-## 2️⃣ update_setting(settings, setting)
+##  update_setting(settings, setting)
 
 Actualiza el valor de una configuración existente.
 
@@ -80,7 +80,7 @@ Setting 'theme' updated to 'dark' successfully!
 
 ---
 
-## 3️⃣ delete_setting(settings, key)
+##  delete_setting(settings, key)
 
 Elimina una configuración existente.
 
@@ -109,7 +109,7 @@ Setting 'theme' deleted successfully!
 
 ---
 
-## 4️ view_settings(settings)
+## view_settings(settings)
 
 Muestra todas las configuraciones almacenadas.
 
@@ -164,7 +164,7 @@ Este proyecto utiliza varios conceptos fundamentales de Python:
 
 ---
 
-# 📂 Estructura del proyecto
+#  Estructura del proyecto
 
 ```
 user-config-manager
@@ -191,6 +191,6 @@ python main.py
 
 ---
 
-# 📚 Autor
+#  Autor
 
 Proyecto desarrollado por **Juanma Acosta** como práctica de programación en Python.
