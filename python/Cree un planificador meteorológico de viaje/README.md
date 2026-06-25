@@ -1,4 +1,4 @@
-# 🌤️ Travel Weather Planner
+#  Travel Weather Planner
 
 <img src="https://img.shields.io/badge/Python-3.x-blue.svg" alt="Python Version">
 
@@ -6,7 +6,7 @@ Laboratorio de programación que utiliza **declaraciones condicionales** para de
 
 ---
 
-## 📋 Descripción
+##  Descripción
 
 En este laboratorio crearás un planificador meteorológico de viaje utilizando declaraciones condicionales (`if`, `elif`, `else`) para evaluar diferentes escenarios de desplazamiento en función del clima, la distancia a recorrer y la disponibilidad de un vehículo.
 
@@ -14,7 +14,7 @@ En este laboratorio crearás un planificador meteorológico de viaje utilizando 
 
 ---
 
-## 🔧 Variables Requeridas
+##  Variables Requeridas
 
 | Variable | Tipo | Descripción |
 |:---------|:-----|:------------|
@@ -26,9 +26,9 @@ En este laboratorio crearás un planificador meteorológico de viaje utilizando 
 
 ---
 
-## 🧠 Reglas de Decisión
+##  Reglas de Decisión
 
-### 📏 Evaluación por Rango de Distancia (en orden ascendente)
+###  Evaluación por Rango de Distancia (en orden ascendente)
 
 | Rango | Condición para Viajar |
 |:-----:|:----------------------|
@@ -39,7 +39,7 @@ En este laboratorio crearás un planificador meteorológico de viaje utilizando 
 
 ---
 
-## ✅ Lista de Verificación
+##  Lista de Verificación
 
 ### Variables
 - [ ] 1. Tener una variable llamada `distance_mi`
@@ -61,9 +61,9 @@ En este laboratorio crearás un planificador meteorológico de viaje utilizando 
 
 ---
 
-## 🧪 Casos de Prueba Esperados
+##  Casos de Prueba Esperados
 
-| # | Distancia | 🌧️ Lluvia | 🚲 Bicicleta | 🚗 Auto | 📱 App | Resultado Esperado |
+| # | Distancia |  Lluvia |  Bicicleta | Auto |  App | Resultado Esperado |
 |:-:|:---------:|:---------:|:------------:|:-------:|:------:|:------------------:|
 | 15 | ≤ 1 milla | No | - | - | - | `True` |
 | 16 | ≤ 1 milla | Sí | - | - | - | `False` |
@@ -76,7 +76,7 @@ En este laboratorio crearás un planificador meteorológico de viaje utilizando 
 
 ---
 
-## 📝 Notas Importantes
+##  Notas Importantes
 
 - Debes utilizar declaraciones condicionales para determinar si es posible realizar desplazamientos
 - Evalúa las categorías de distancia en orden ascendente
@@ -85,6 +85,6 @@ En este laboratorio crearás un planificador meteorológico de viaje utilizando 
 
 ---
 
-## 🎯 ¡Completa el laboratorio!
+##  ¡Completa el laboratorio!
 
 Asegúrate de que tu programa pase todos los casos de prueba del 1 al 22 para completar exitosamente el laboratorio.
