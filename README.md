@@ -1,4 +1,4 @@
-# 🐍 Proyectos de Python - freeCodeCamp
+#  Proyectos de Python - freeCodeCamp
 
 <p align="center">
   <img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" width="200">
