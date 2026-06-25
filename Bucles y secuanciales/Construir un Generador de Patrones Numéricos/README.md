@@ -1,8 +1,8 @@
-# 🔢 Number Pattern Generator
+#  Number Pattern Generator
 
 Este proyecto consiste en la creación de una función en Python llamada `number_pattern` que genera un patrón numérico en forma de cadena.
 
-## 📌 Descripción
+##  Descripción
 
 La función recibe un número entero positivo `n` y devuelve una cadena con todos los números desde **1 hasta n**, separados por un espacio.
 
@@ -53,7 +53,7 @@ La función debe cumplir con las siguientes condiciones:
 
 ---
 
-## 📚 Objetivo 
+##  Objetivo 
 
 Este ejercicio refuerza los fundamentos de Python relacionados con estructuras de control, validación de datos y construcción de cadenas dinámicas.
 
