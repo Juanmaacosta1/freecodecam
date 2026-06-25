@@ -1,6 +1,6 @@
-# 💵 Divisor de Billetes - Bill Splitter
+#  Divisor de Billetes - Bill Splitter
 
-## 🐍 Proyecto en Python | freeCodeCamp
+##  Proyecto en Python | freeCodeCamp
 
 Este taller consiste en construir un pequeño programa que calcula cuánto debe pagar cada persona después de sumar los costos de una comida, agregar una propina y dividir el total entre un grupo de amigos.
 
@@ -8,7 +8,7 @@ Es un ejercicio práctico enfocado en el trabajo con números, operaciones matem
 
 ---
 
-## 🎯 Objetivo del proyecto
+## Objetivo del proyecto
 
 - Practicar el uso de variables numéricas
 - Realizar operaciones matemáticas básicas (+, *, /)
@@ -18,7 +18,7 @@ Es un ejercicio práctico enfocado en el trabajo con números, operaciones matem
 
 ---
 
-## 🧠 Conceptos aplicados
+##  Conceptos aplicados
 
 - Variables tipo float
 - Suma de múltiples valores
@@ -29,7 +29,7 @@ Es un ejercicio práctico enfocado en el trabajo con números, operaciones matem
 
 ---
 
-## 🧮 Lógica del programa
+## Lógica del programa
 
 1. Se definen los costos individuales:
    - Aperitivos
@@ -46,7 +46,7 @@ Es un ejercicio práctico enfocado en el trabajo con números, operaciones matem
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+##  Tecnologías utilizadas
 
 - Python 3
 - Operadores matemáticos
