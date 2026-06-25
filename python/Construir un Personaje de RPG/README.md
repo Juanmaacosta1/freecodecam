@@ -1,4 +1,4 @@
-# ⚔️ RPG Character Builder
+#  RPG Character Builder
 
 Proyecto desarrollado como parte de mi práctica en Python dentro del módulo de Fundamentos.
 
@@ -6,7 +6,7 @@ En este laboratorio construí una función que permite crear un personaje para u
 
 ---
 
-## 🎯 Objetivo
+##  Objetivo
 
 Implementar una función llamada `create_character` que:
 
@@ -19,7 +19,7 @@ Implementar una función llamada `create_character` que:
 
 ---
 
-## 🧠 Reglas del sistema
+##  Reglas del sistema
 
 ### Validaciones del nombre
 
@@ -44,7 +44,7 @@ Esto simula un sistema clásico de distribución de puntos iniciales en juegos R
 
 ---
 
-## 🖥️ Ejemplo de uso
+##  Ejemplo de uso
 
 ```python
 create_character("ren", 4, 2, 1)
