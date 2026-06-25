@@ -1,4 +1,4 @@
-# 🧩 Extractor de Pines
+#  Extractor de Pines
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python" alt="Python">
@@ -7,12 +7,12 @@
 </p>
 
 <p align="center">
-  <b>🔍 Extrae códigos secretos ocultos en poemas • Ideal para aprender Python • Fácil de usar</b>
+  <b> Extrae códigos secretos ocultos en poemas • Ideal para aprender Python • Fácil de usar</b>
 </p>
 
 ---
 
-## 📖 ¿Qué es esto?
+## ¿Qué es esto?
 
 **Extractor de Pines** es un proyecto en Python que analiza poemas para descifrar códigos secretos ocultos en las longitudes de las palabras. ¿Un poema con un mensaje oculto? Sí, cada línea guarda un dígito del pin, y este programa sabe exactamente dónde buscar.
 
@@ -40,7 +40,7 @@ El programa es inteligente y simplemente salta esa línea. ¡Nadie se entera!
 
 ---
 
-## 🕵️‍♂️ ¿Cómo funciona el programa?
+##  ¿Cómo funciona el programa?
 
 El programa paso a paso:
 -  Toma uno o varios poemas
