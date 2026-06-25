@@ -1,8 +1,8 @@
-# 👨‍💼 Proyecto: Gestión de Información de Empleados
+#  Proyecto: Gestión de Información de Empleados
 
 Este repositorio contiene una implementación en Python para gestionar y formatear información de empleados. El proyecto explora conceptos fundamentales de manejo de cadenas, concatenación, f-strings, slicing y conversión de tipos.
 
-## 📋 Descripción
+## Descripción
 
 El proyecto simula la creación de una tarjeta de información de empleado (`employee_card`) que contiene datos como nombre, edad, puesto, salario y código de empleado. A través de ejercicios progresivos, se aprenden técnicas esenciales para manipular texto en Python.
 
@@ -12,7 +12,7 @@ El proyecto simula la creación de una tarjeta de información de empleado (`emp
 - Extraer información específica de códigos usando slicing.
 - Practicar la conversión de tipos para concatenación.
 
-## 🚀 Funcionalidades
+##  Funcionalidades
 
 - **Concatenación básica:** Combinar nombres y apellidos para formar el nombre completo.
 - **Concatenación con espacio:** Insertar correctamente espacios entre palabras.
@@ -22,7 +22,7 @@ El proyecto simula la creación de una tarjeta de información de empleado (`emp
 - **String slicing:** Extraer porciones específicas de códigos de empleado.
 - **Indexación negativa:** Obtener caracteres desde el final de una cadena.
 
-## 📦 Instalación y Uso
+##  Instalación y Uso
 
 ### Prerrequisitos
 - Python 3.6 o superior (para soporte de f-strings).
